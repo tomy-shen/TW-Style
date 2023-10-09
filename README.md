@@ -1,5 +1,5 @@
 # TW-Style
-With a simple and lightweight design concept, we create a style that is compatible with English and Chinese visuals. This is the author's first Open Source work on Github. It should also be the first theme made in taiwan. If you like this theme, please feel free to give a star to this project, so that the author will have the motivation to improve!
+A free redmine theme with a simple and lightweight design concept, we create a style that is compatible with English and Chinese visuals. This is the author's first Open Source work on Github. It should also be the first theme made in taiwan. If you like this theme, please feel free to give a star to this project, so that the author will have the motivation to improve!
 
 **Version：** 1.0.0
 
