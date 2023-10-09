@@ -2,7 +2,9 @@
 With a simple and lightweight design concept, we create a style that is compatible with English and Chinese visuals. This is the author's first Open Source work on Github. It should also be the first theme made in taiwan. If you like this theme, please feel free to give a star to this project, so that the author will have the motivation to improve!
 
 **Version：** 1.0.0
+
 **Compatible with :** Redmine 5.0 - 4.1
+
 **Support by :** [Redmine-TW](https://redmine-tw.net)
 
 ## Installation
@@ -12,6 +14,7 @@ Then go to Redmine > Administration > Settings > Display and select TW-Style fro
 
 ## Screenshots
 
+![screenshot01](screenshots/TW-Style-redmine-overview.png)
 ![screenshot01](screenshots/TW-Style-redmine-plugins.png)
 ![screenshot02](screenshots/TW-Style-redmine-issueList.png)
 
