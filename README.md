@@ -1,7 +1,5 @@
 # TW-Style
 
-以簡潔、輕量的設計理念，打造兼容於英文和中文視覺的佈景風格，這是作者在 Github 上的第一款 Open Source 作品，應該也是 Redmine 第一款 made in Taiwan 的佈景主題，如果你喜歡這個佈景主題，請不吝至 Github 給這個專案一顆星星，讓作者有持續精進改善的動力唷！
-
 A free Redmine theme made in Taiwan.
 
 With a simple and lightweight design concept, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this theme, please feel free to give a star to this project.
