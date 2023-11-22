@@ -2,13 +2,13 @@
 
 A free Redmine theme made in Taiwan.
 
-With a simple and lightweight design concept, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this theme, please feel free to give a star to this project.
+With simple design concept, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this, please feel free to give a star to this project.
 
-**Version：** 1.0.0
+**Version：** 2.0.0
 
-**Compatible with :** Redmine 5.0 - 4.1
+**Compatible with :** Redmine 5.1 - 4.1
 
-**Support by :** [Redmine-TW](https://redmine-tw.net)
+**Supported by :** [Redmine-TW](https://redmine-tw.net)
 
 ## Installation
 
@@ -18,12 +18,13 @@ Then go to Redmine > Administration > Settings > Display and select TW-Style fro
 ## Screenshots
 
 ![screenshot01](screenshots/TW-Style-redmine-overview.png)
-![screenshot02](screenshots/TW-Style-redmine-issueList.png)
-![screenshot01](screenshots/TW-Style-redmine-plugins.png)
+![screenshot02](screenshots/TW-Style-redmine-issue.png)
+![screenshot03](screenshots/TW-Style-redmine-gantt.png)
+![screenshot04](screenshots/TW-Style-redmine-plugins.png)
 
 ## How to replace Logo for your Redmine
 
-1. Find 'website LOGO' in the application.css
+1. Find 'Website LOGO' in the application.css
 2. Change the file name if you upload new image
 3. If your image file size is too large or too small, You may also need to adjust css parameters
 
