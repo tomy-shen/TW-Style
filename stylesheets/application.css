@@ -28,7 +28,7 @@
 #main       { border-top: 1px solid lightgray; }
 #sidebar    { background: whitesmoke; }
 #projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
-#projects-index ul.projects.root { display: flex;f lex-wrap: wrap; }
+#projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
 #projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 8px; margin: 8px; width: calc(25% - 10px); }
 #projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
 #history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
