@@ -28,8 +28,11 @@ If you allow avatars or have installed avatar-related plugins, please remember t
 ## Screenshots
 
 ![screenshot01](screenshots/TW-Style-redmine-overview.png)
+
 ![screenshot02](screenshots/TW-Style-redmine-issue.png)
+
 ![screenshot03](screenshots/TW-Style-redmine-gantt.png)
+
 ![screenshot04](screenshots/TW-Style-redmine-plugins.png)
 
 ## Contributing
