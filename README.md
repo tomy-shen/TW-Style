@@ -15,10 +15,6 @@ With simple design, create a style that is compatible with English and Chinese v
 To install TW-Style, just download .zip and unpack it to your Redmine's public/themes folder.
 Then go to Redmine > Administration > Settings > Display and select TW-Style from the list and save the changes.
 
-## Notice
-
-If you allow avatars or have installed avatar-related plugins, please remember to check the checkbox in Administration > Settings > Display > 「Use Gravatar user icons」
-
 ## How to replace Logo for your Redmine
 
 1. Find 'Website LOGO' in the application.css

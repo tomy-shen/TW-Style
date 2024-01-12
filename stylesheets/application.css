@@ -3,7 +3,7 @@
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2024-01-12
+ * @2024-01-13
  * @license https://opensource.org/license/mit/
  *
  */
@@ -297,7 +297,8 @@ div.agile-board.autoscroll { background-color: whitesmoke; }
 #sidebar a.dashboard.selected { line-height: 1.7em; padding: 3px 12px 4px 11px; background-color: #C8C8C8; border-radius: 18px; }
 a.dashboard { line-height: 1.7em; padding: 3px 12px 4px 11px; margin-left: -2px; }
 /* Plugin local_avatars */
-body.avatars-on div.journal { padding-left: 32px; }
+body.avatars-on div.journal h4 img.gravatar { margin-left: -32px; }
+body.avatars-off div.journal h4 img.gravatar { margin-left: 0px; }
 img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) { 
     border-radius: 160px; -moz-border-radius: 160px; -webkit-border-radius: 160px;
 }
