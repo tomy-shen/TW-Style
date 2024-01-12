@@ -1,3 +1,10 @@
+v2.0.1 (2024-01-12):
+
+* 活動頁面的視覺調整
+* 設定頁面的視覺優化
+* Header Section 和 Search bar 的視覺優化
+* 增加對 redmine_local_avatars 插件的適配與優化
+
 v2.0.0 (2023-11-22):
 
 * 支援側邊欄的折疊與展開（collapsible sidebar）
