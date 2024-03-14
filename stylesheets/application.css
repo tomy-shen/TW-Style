@@ -1,16 +1,16 @@
 /**
- * TW-Style theme version 2.0.1, Copyright (C) 2024 Tomy Shen
+ * TW-Style theme version 2.0.2, Copyright (C) 2024 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2024-01-13
+ * @2024-03-14
  * @license https://opensource.org/license/mit/
  *
  */
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("../../../stylesheets/application.css");
-/* #3E5B76 */
+
 #top-menu li { padding-right: 5px; }
 #top-menu a  { font-weight: unset; }
 #header { background-color: white; min-height: 4.4em;box-shadow: 0px 5px 10px -5px lightgray; }
@@ -18,11 +18,9 @@
 #header a { color: black; }
 #quick-search { margin-top: 8px; }
 #main-menu li a { color: black; font-weight:normal; border-bottom: 3px solid transparent; }
-/* #main-menu li a:hover { background: #fff; color: black; border-bottom: 3px solid lightcoral; } */
 #main-menu li a:hover { background: #fff; color: black; border-bottom: 3px solid #628DB6; }
 #main-menu li a.new-object { background-color: transparent; }
 #main-menu li a.new-object:hover { background: #fff; color: black; border-bottom: 3px solid transparent; }
-/* #main-menu li a.selected, #main-menu li a.selected:hover { background: lightcoral; color: white; border-bottom: 0 solid transparent; border-radius: 50em; } */
 #main-menu li a.selected, #main-menu li a.selected:hover { background: #628DB6; color: white; border-bottom: 0 solid transparent; border-radius: 50em; }
 #main-menu .menu-children li a { border-bottom: 3px solid transparent; }
 #main-menu .menu-children li a:hover { border-bottom: 3px solid transparent; }
@@ -34,7 +32,6 @@
 #projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
 #history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
 #content .tabs ul li a { border: 1px solid transparent; }
-#document-list .document-group { padding: 18px; border: 1px solid lightgray; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
 #footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2024"; white-space: pre-wrap; }
 #login-form { border: 1px solid transparent; background-color: transparent; }
 input#login-submit { color: white;background: #3E5B76; border: 0px; }
@@ -63,7 +60,6 @@ legend { margin-left: 8px; }
 #project-jump .drdn-content { padding: 2px; margin-top: 4px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
 input.autocomplete { background: #fff url(icons/magnifier.png) no-repeat 4px 50%; padding-left:24px !important; }
 
-.document-item    { padding-bottom: 10px; padding-left: 38px; }
 .box              { border-radius: 8px; padding: 12px; }
 .nodata, .warning { background-color: #fff3cd; border-color: #ffecb5; }
 
@@ -162,8 +158,7 @@ div#top-menu {
 /* Fixed header
 #wrapper { width:100%; height: 100vh; }
 #main { display: flex; flex: 1 1 auto; overflow: auto;}
-*/
-/*
+
 div#top-menu {
     position: fixed;
     top: 0px;
@@ -177,7 +172,7 @@ div#top-menu {
 /* Global */
 h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-serif; }
 /* Top MENU #5B7493 */
-#top-menu { background-color: ##5B7493; font-size: 1em; padding: 6px 14px; height: unset; line-height: 1.8em }
+#top-menu { background-color: #5B7493; font-size: 1em; padding: 6px 14px; height: unset; line-height: 1.8em }
 #top-menu a { text-decoration:none; }
 #top-menu a:hover { color: #ebe9f4; text-decoration: none; }
 /* Search Bar */
@@ -192,10 +187,20 @@ h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-s
     left: 0;
 }
 #quick-search form { margin-right: 4px; }
-#quick-search #q { margin-left: -32px; border-radius: 25px; }
+#quick-search #q { margin-left: -34px; border-radius: 25px; }
 #quick-search #project-jump { box-shadow: 0 0px 3px rgba(0,0,0,.1);border-radius: 25px; }
-input#q.small { padding-left: 24px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position*/
+input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position*/
 #quick-search #q:focus { border: 1px solid darkgray; } 
+/* Popup window style*/
+div.modal { border-radius:0 ; padding: 0 0 4px 0; }
+.ui-widget.ui-widget-content { border: unset; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: unset; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {border-top-left-radius: unset; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { border-bottom-left-radius: unset; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border-bottom-right-radius: unset; }
+.ui-widget-header { background: #628DB6; border: unset; color: #fff; }
+button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close { border-radius: 50%; }
+.ui-dialog .ui-dialog-titlebar-close { right: 0.4em; }
 /* Settings section */
 #content .tabs ul li a { font-weight: unset; }
 #content .tabs ul li a.selected { font-weight: bold; color: #169; }
@@ -239,6 +244,17 @@ ul.cal             { border: 0; } /* compatible with Redmine 5.1*/
 .cal .week-number  { background-color: transparent; }
 .cal .calhead      { background-color: transparent; margin-bottom: 4px; }
 .cal div.issue     { padding:unset; background: white;padding: 4px; }
+/* Documents module*/
+#document-list .document-group { padding: 18px 18px 0 18px; margin-bottom: 2px; }
+.document-item { padding-bottom: 10px; padding-top: 2px; padding-left: 24px; margin-left: 32px; border-left: 2px dashed lightgray; }
+.document-item .updated_on em { padding-left: 20px; font-weight: bold; }
+.document-item h4.title { padding-bottom: 10px; font-size: 15px; font-weight: 300; }
+.document-item h4.title a {
+    background-image: url(icons/attachment.png);;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
 /* News module */
 article.news-article {
     padding: 18px;

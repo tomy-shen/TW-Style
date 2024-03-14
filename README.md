@@ -1,10 +1,12 @@
 # TW-Style
 
+![Redmine](https://img.shields.io/badge/Redmine-5.1-brightgreen)
+
 A free Redmine theme made in Taiwan.
 
 With simple design, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this, please feel free to give a star to this project.
 
-**Version：** 2.0.1
+**Version：** 2.0.2
 
 **Compatible with :** Redmine 5.1 - 4.1
 
@@ -29,7 +31,7 @@ Then go to Redmine > Administration > Settings > Display and select TW-Style fro
 
 ![screenshot03](screenshots/TW-Style-redmine-gantt.png)
 
-![screenshot04](screenshots/TW-Style-redmine-plugins.png)
+![screenshot04](screenshots/TW-Style-redmine-popup.png)
 
 ## Contributing
 
