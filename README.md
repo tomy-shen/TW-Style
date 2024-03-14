@@ -31,7 +31,7 @@ Then go to Redmine > Administration > Settings > Display and select TW-Style fro
 
 ![screenshot03](screenshots/TW-Style-redmine-gantt.png)
 
-![screenshot04](screenshots/TW-Style-redmine-popup.png)
+![screenshot04](screenshots/TW-Style-redmine-roadmap.png)
 
 ## Contributing
 
