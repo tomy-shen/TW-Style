@@ -1,9 +1,9 @@
 /**
- * TW-Style theme version 2.0.2, Copyright (C) 2024 Tomy Shen
+ * TW-Style theme version 2.0.3, Copyright (C) 2024 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2024-03-14
+ * @2024-04-02
  * @license https://opensource.org/license/mit/
  *
  */
@@ -17,6 +17,7 @@
 #header h1 { color: black; margin-top: 5px; font-family: "Courier Prime", monospace , system-ui, "Trebuchet MS", Verdana, sans-serif; }
 #header a { color: black; }
 #quick-search { margin-top: 8px; }
+button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu extend button */
 #main-menu li a { color: black; font-weight:normal; border-bottom: 3px solid transparent; }
 #main-menu li a:hover { background: #fff; color: black; border-bottom: 3px solid #628DB6; }
 #main-menu li a.new-object { background-color: transparent; }
@@ -25,7 +26,7 @@
 #main-menu .menu-children li a { border-bottom: 3px solid transparent; }
 #main-menu .menu-children li a:hover { border-bottom: 3px solid transparent; }
 #main       { border-top: 1px solid lightgray; }
-#sidebar    { background: whitesmoke; }
+#sidebar    { background: white; }
 #projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
 #projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
 #projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 8px; margin: 8px; width: calc(25% - 10px); }
@@ -132,7 +133,7 @@ div#top-menu {
 }
 /* Responsive RWD */
 @media screen and (max-width: 899px) {
-    #header { background-color: #3E5B76 !important; }
+    #header { background-color: #5B7493 !important; }
     .flyout-menu { background-color: #628DB6 !important; }
     .flyout-menu h3 { background-color: #003153 !important; }
 }
@@ -155,19 +156,6 @@ div#top-menu {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-/* Fixed header
-#wrapper { width:100%; height: 100vh; }
-#main { display: flex; flex: 1 1 auto; overflow: auto;}
-
-div#top-menu {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 10100;
-}
-#header { margin-top: 44px; }
-*/
 
 /* Global */
 h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-serif; }
@@ -189,9 +177,9 @@ h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-s
 #quick-search form { margin-right: 4px; }
 #quick-search #q { margin-left: -34px; border-radius: 25px; }
 #quick-search #project-jump { box-shadow: 0 0px 3px rgba(0,0,0,.1);border-radius: 25px; }
-input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position*/
+input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position */
 #quick-search #q:focus { border: 1px solid darkgray; } 
-/* Popup window style*/
+/* Popup window style */
 div.modal { border-radius:0 ; padding: 0 0 4px 0; }
 .ui-widget.ui-widget-content { border: unset; }
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: unset; }
@@ -226,25 +214,25 @@ div#activity dl {
     border-right: 0px;
     margin-top: 2px;
 }
-/* Roadmap percentage bar*/ 
+/* Roadmap percentage bar */ 
 #roadmap { margin-left: 10px; }
 table.progress td:first-child { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
 table.progress td:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
 table.progress td.closed { background: #00c600 none repeat scroll 0%; }
-.version-overview table.progress td, table.progress td { Height: .5em; }
+.version-overview table.progress td, table.progress td { height: .5em; }
 /* Calendar module */
 table.cal          { border: 0 !important; border-width: 0px !important; } /* Table border */
 table.cal thead th { background-color: transparent !important; padding-bottom: 8px !important; } /* Table top row */
-table.cal td.week-number { border: 0 none !important; background-color: transparent !important; } /* Table left column  */
+table.cal td.week-number { border: 0 none !important; background-color: transparent !important; } /* Table left column */
 table.cal td       { border: 1px solid #e3e5ec !important; } /* every td border */
 table.cal td.today { background: cornsilk !important; } /* Today's background color */
 
-ul.cal             { border: 0; } /* compatible with Redmine 5.1*/
+ul.cal             { border: 0; } /* compatible with Redmine 5.1 */
 .cal .calbody      { margin-right: -1px; margin-top: -1px; border-bottom: 1px solid #d7d7d7; border-right: 1px solid #d7d7d7; }
 .cal .week-number  { background-color: transparent; }
 .cal .calhead      { background-color: transparent; margin-bottom: 4px; }
 .cal div.issue     { padding:unset; background: white;padding: 4px; }
-/* Documents module*/
+/* Documents module */
 #document-list .document-group { padding: 18px 18px 0 18px; margin-bottom: 2px; }
 .document-item { padding-bottom: 10px; padding-top: 2px; padding-left: 24px; margin-left: 32px; border-left: 2px dashed lightgray; }
 .document-item .updated_on em { padding-left: 20px; font-weight: bold; }
@@ -272,7 +260,7 @@ h3.comments {
     background-repeat: no-repeat;
     padding-left: 20px;
 }
-/* Gantt moudle*/
+/* Gantt moudle */
 .task_late { background: #f66; }
 .task_done { background: #00c600; }
 /* Wiki module */
@@ -337,7 +325,6 @@ img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) {
     width: 14px;
     height: 16px;
     transform: translateY(100%);
-    background-color: #eff0f4;
     background-position: center;
     line-height: 1;
     -webkit-user-select: none;
