@@ -6,7 +6,7 @@ A free Redmine theme made in Taiwan.
 
 With simple design, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this, please feel free to give a star to this project.
 
-**Version：** 2.0.4
+**Version：** 2.1.0
 
 **Compatible with :** Redmine 5.1 - 4.1
 
@@ -16,6 +16,10 @@ With simple design, create a style that is compatible with English and Chinese v
 
 To install TW-Style, just download .zip and unpack it to your Redmine's public/themes folder.
 Then go to Redmine > Administration > Settings > Display and select TW-Style from the list and save the changes.
+
+## Issues are listed in different colors according to their priority
+
+Issue priorities can be added from the enumerations in the administration, and the weight is determined according to the sort order. By default, the lowest weight and the top three with the highest weight will be displayed in different color.
 
 ## How to replace Logo for your Redmine
 
@@ -29,9 +33,9 @@ Then go to Redmine > Administration > Settings > Display and select TW-Style fro
 
 ![screenshot02](screenshots/TW-Style-redmine-issue.png)
 
-![screenshot03](screenshots/TW-Style-redmine-gantt.png)
+![screenshot04](screenshots/TW-Style-redmine-issueList.png)
 
-![screenshot04](screenshots/TW-Style-redmine-roadmap.png)
+![screenshot03](screenshots/TW-Style-redmine-gantt.png)
 
 ## Contributing
 

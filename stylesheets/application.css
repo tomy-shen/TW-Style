@@ -1,9 +1,9 @@
 /**
- * TW-Style theme version 2.0.4, Copyright (C) 2024 Tomy Shen
+ * TW-Style theme version 2.1.0, Copyright (C) 2024 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2024-04-16
+ * @2024-05-16
  * @license https://opensource.org/license/mit/
  *
  */
@@ -14,7 +14,11 @@
 #top-menu li { padding-right: 5px; }
 #top-menu a  { font-weight: unset; }
 #header { background-color: white; min-height: 4.4em;box-shadow: 0px 5px 10px -5px lightgray; }
-#header h1 { color: black; margin-top: 5px; font-family: "Courier Prime", monospace , system-ui, "Trebuchet MS", Verdana, sans-serif; }
+#header h1 {
+    color: black;
+    margin-top: 5px;
+    font-family: -apple-system, "Microsoft JhengHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 #header a { color: black; }
 #quick-search { margin-top: 8px; }
 button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu extend button */
@@ -29,14 +33,14 @@ button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu 
 #sidebar    { background: white; }
 #projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
 #projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
-#projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 8px; margin: 8px; width: calc(25% - 10px); }
+#projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 0px; margin: 8px; width: calc(25% - 10px); }
 #projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
 #history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
 #content .tabs ul li a { border: 1px solid transparent; }
 #footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2024"; white-space: pre-wrap; }
 #login-form { border: 1px solid transparent; background-color: transparent; }
-input#login-submit { color: white;background: #3E5B76; border: 0px; }
-input#username, input#password { border-top: 0px;border-left: 0px; border-right: 0px; border-radius: 0px; }
+input#login-submit { color: white; background: #3E5B76; border: 0px; }
+#login-form input#username, #login-form input#password { border-top: 0px; border-left: 0px; border-right: 0px; border-radius: 0px; }
 
 body { font-size: 14px; }
 table { border-spacing: 0; border-collapse: collapse; }
@@ -79,7 +83,7 @@ input[type="submit"]:hover { background-color: #A7C7E7; }
   height: 22px;
   line-height: 22px;
   vertical-align: middle;
-  background-color: #eeeeee;
+  background-color: whitesmoke;
   border-radius: 3px;
   background-position: 15% 50%;
 }
@@ -161,7 +165,9 @@ div#top-menu {
 }
 
 /* Global */
-h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-serif; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, "Microsoft YaHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 /* Top MENU #5B7493 */
 #top-menu { background-color: #5B7493; font-size: 1em; padding: 6px 14px; height: unset; line-height: 1.8em }
 #top-menu a { text-decoration:none; }
@@ -182,6 +188,20 @@ h1, h2, h3, h4, h5, h6 { font-family: system-ui, "Trebuchet MS", Verdana, sans-s
 #quick-search #project-jump { box-shadow: 0 0px 3px rgba(0,0,0,.1);border-radius: 25px; }
 input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position */
 #quick-search #q:focus { border: 1px solid darkgray; } 
+/* Priority */
+.autoscroll table.list .priority-highest { background-color: #FFD3D3 } 
+.autoscroll table.list .priority-highest:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-high2 { background-color: #FFE1E1 }
+.autoscroll table.list .priority-high2:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-high3 { background-color: #FFEEEE }
+.autoscroll table.list .priority-high3:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-lowest { background-color: #EAF7FF }
+.autoscroll table.list .priority-lowest:hover { background-color: #FEFBE7 }
+tr.time-entry td.issue a.issue {
+    padding: 2px 8px;
+    border: 1px solid lightgray;
+    margin-right: 4px;
+}
 /* Popup window style */
 div.modal { border-radius:0 ; padding: 0 0 4px 0; }
 .ui-widget.ui-widget-content { border: unset; }
@@ -305,7 +325,7 @@ blockquote {
     color: gray;
 }
 /* Plugin redmine-agile */
-body .issue-card { background-color: cornsilk; }
+body .issue-card { background-color: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
 div.agile-board.autoscroll { background-color: whitesmoke; }
 .agile-board table.list.issues-board tbody tr { background-color: whitesmoke !important; }
 .planning-board .column-header { text-align: center; }
