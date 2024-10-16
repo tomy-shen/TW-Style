@@ -6,7 +6,7 @@ A free Redmine theme made in Taiwan.
 
 With simple design, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this, please feel free to give a star to this project.
 
-**Version：** 2.1.0
+**Version：** 2.2.0
 
 **Compatible with :** Redmine 5.1 - 4.1
 

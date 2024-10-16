@@ -1,5 +1,5 @@
 /**
- * TW-Style theme version 2.1.0, Copyright (C) 2024 Tomy Shen
+ * TW-Style theme version 2.2.0, Copyright (C) 2024 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
@@ -8,6 +8,7 @@
  *
  */
 
+@import url("normalize.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("../../../stylesheets/application.css");
 
@@ -144,15 +145,20 @@ div#top-menu {
     .flyout-menu { background-color: #628DB6 !important; }
     .flyout-menu h3 { background-color: #003153 !important; }
 }
-@media screen and (max-width: 1080px) {
-    #projects-index ul.projects li.root { width: calc(33.333% - 10px); }
+@media screen and (min-width: 1181px) {
+    #projects-index ul.projects li.root { width: calc(25% - 18px); }
 }
-@media screen and (max-width: 880px) {
-    #projects-index ul.projects li.root { width: calc(50% - 10px); }
+@media screen and (max-width: 1180px) {
+    #projects-index ul.projects li.root { width: calc(33.333% - 18px); }
+}
+@media screen and (max-width: 888px) {
+    #projects-index ul.projects li.root { width: calc(50% - 18px); }
 }
 @media screen and (max-width: 600px) {
-    #projects-index ul.projects li.root { width: calc(100% - 10px); }
+    #projects-index ul.projects li.root { width: calc(100% - 12px); }
 }
+
+
 /* Page transition */
 #main {
     animation: fadeInAnimation ease-in-out 0.6s;
@@ -202,6 +208,19 @@ tr.time-entry td.issue a.issue {
     border: 1px solid lightgray;
     margin-right: 4px;
 }
+
+/* Fix reply subject bug */
+input#message_subject, input#document_title, input#issue_subject, input#news_title, textarea#news_summary {
+    width: 100%; max-width: 100%;
+}
+
+/* compatible for normal.css */
+div.issue .attribute .value { overflow: visible; }
+[type="checkbox"], [type="radio"] { margin-left: 4px; margin-right: 4px; }
+
+/* Forum setting table borderless*/
+table.list, .table-list { border:0 }
+
 /* Popup window style */
 div.modal { border-radius:0 ; padding: 0 0 4px 0; }
 .ui-widget.ui-widget-content { border: unset; }
@@ -368,3 +387,7 @@ img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) {
     right: 0;
     background-image: url(icons/ArrowForward.png);
 }
+
+/* 2024-0402 wiki行間距、字體顏色 */
+.wiki.wiki-page { font-size: 1.1em; font-weight: 400; }
+div.wiki { color: #121212; line-height: 1.5; }
