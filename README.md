@@ -16,8 +16,10 @@ With simple design, create a style that is compatible with English and Chinese v
 
 ## Installation
 
-To install TW-Style, just download .zip and unpack it to your Redmine's public/themes folder.
+To install TW-Style, just download .zip and unpack it to your Redmine's themes/ folder.
 Then go to Redmine > Administration > Settings > Display and select TW-Style from the list and save the changes.
+
+> Due to the update of redmine 6, the current themes need to be precompiled after the initial installation. Reference [here](https://www.redmine.org/issues/41754).
 
 ## Issues are listed in different colors according to their priority
 
