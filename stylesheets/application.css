@@ -1,33 +1,55 @@
-/**
- * TW-Style theme version 2.2.0, Copyright (C) 2024 Tomy Shen
+@import url("normalize.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url(../../../stylesheets/application.css);
+@import url(/application.css);
+
+/*
+ * TW-Style theme version 3.0.0, Copyright (C) 2025 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2024-05-16
+ * @2025-09-22
  * @license https://opensource.org/license/mit/
  *
  */
 
-@import url("normalize.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("../../../stylesheets/application.css");
-
 #top-menu li { padding-right: 5px; }
 #top-menu a  { font-weight: unset; }
-#header { background-color: white; min-height: 4.4em;box-shadow: 0px 5px 10px -5px lightgray; }
+/* modify by tomy 2025-0918 for redmine6 */
+#header { 
+    background: linear-gradient(to right, #356D92, #e4e5e6);
+    min-height: 4.4em;
+    padding: 8px 16px 0px 16px;
+    box-shadow: 0px 5px 10px -5px lightgray; 
+}
 #header h1 {
-    color: black;
-    margin-top: 5px;
+    color: white;
+    margin-top: 3px;
+    margin-bottom: 12px;
     font-family: -apple-system, "Microsoft JhengHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 #header a { color: black; }
 #quick-search { margin-top: 8px; }
 button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu extend button */
-#main-menu li a { color: black; font-weight:normal; border-bottom: 3px solid transparent; }
-#main-menu li a:hover { background: #fff; color: black; border-bottom: 3px solid #628DB6; }
+#main-menu li a { color: black; border-bottom: 3px solid transparent; }
+#main-menu li a:hover {
+    line-height: 1.7em; /* add by tomy 2025-0922 for redmine6 */
+    color: black;
+    background: #fff;
+    border-bottom: 3px solid #628DB6;
+}
 #main-menu li a.new-object { background-color: transparent; }
 #main-menu li a.new-object:hover { background: #fff; color: black; border-bottom: 3px solid transparent; }
-#main-menu li a.selected, #main-menu li a.selected:hover { background: #628DB6; color: white; border-bottom: 0 solid transparent; border-radius: 50em; }
+/* modify by tomy 2025-0922 for redmine6 */
+#main-menu li a.selected, #main-menu li a.selected:hover {
+    background: #628DB6;
+    color: white;
+    border-bottom: 0 solid transparent;
+    border-radius: 0px;
+    font-weight: unset;
+    line-height: 1.7em;
+    border-bottom: 3px solid aliceblue;
+}
 #main-menu .menu-children li a { border-bottom: 3px solid transparent; }
 #main-menu .menu-children li a:hover { border-bottom: 3px solid transparent; }
 #main       { border-top: 1px solid lightgray; }
@@ -38,14 +60,14 @@ button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu 
 #projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
 #history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
 #content .tabs ul li a { border: 1px solid transparent; }
-#footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2024"; white-space: pre-wrap; }
+#footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2025"; white-space: pre-wrap; }
 #login-form { border: 1px solid transparent; background-color: transparent; }
 input#login-submit { color: white; background: #3E5B76; border: 0px; }
 #login-form input#username, #login-form input#password { border-top: 0px; border-left: 0px; border-right: 0px; border-radius: 0px; }
 
 body { font-size: 14px; }
 table { border-spacing: 0; border-collapse: collapse; }
-table.list, .table-list { border-collapse: collapse; line-height: 22px; }
+table.list, .table-list { border-collapse: collapse; line-height: 22px; font-size: 0.75rem; }
 table.list th a, table.list .table-list-header a { color: #212136; }
 table.list th, .table-list-header { background-color: transparent; border-bottom: 1px solid lightgray; padding-bottom: 8px; }
 table.list th.activity, table.list th.assigned_to, table.list th.attachments, table.list th.author, table.list th.category, table.list th.comments, table.list th.description, table.list th.fixed_version, table.list th.last_notes, table.list th.last_updated_by, table.list th.name, table.list th.parent-subject, table.list th.priority, table.list th.relations, table.list th.roles, table.list th.status, table.list th.string, table.list th.subject, table.list th.text, table.list th.tracker, table.list th.user, table.list td.activity, table.list td.assigned_to, table.list td.attachments, table.list td.author, table.list td.category, table.list td.comments, table.list td.description, table.list td.fixed_version, table.list td.last_notes, table.list td.last_updated_by, table.list td.name, table.list td.parent-subject, table.list td.priority, table.list td.relations, table.list td.roles, table.list td.status, table.list td.string, table.list td.subject, table.list td.text, table.list td.tracker, table.list td.user {
@@ -58,14 +80,14 @@ table.list td { padding-top: 3px; padding-bottom: 3px; } /* Issue list */
 table.issues td { padding-top: 4px; padding-bottom: 4px; }
 table.list table.progress td, table.progress td { padding-top: 2px; padding-bottom: 2px; }
 
-table.boards a.board { background: url(icons/icon-forum.png) no-repeat 0% 50%; }
 div.issue { padding:20px; margin-top: 2px; background: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
 div#history { margin-top: 18px; }
 div#replies { padding-left: 28px; }
-a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; }
+/* mark because redmine 6
+ a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; } */
 legend { margin-left: 8px; }
 
-#project-jump .drdn-trigger { padding-left: 10px; background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%; border-radius: 25px; }
+#project-jump .drdn-trigger { padding-left: 10px; background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%; border-radius: 25px; } /* use to redmine6 */
 #project-jump .drdn-content { padding: 2px; margin-top: 4px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
 input.autocomplete { background: #fff url(icons/magnifier.png) no-repeat 4px 50%; padding-left:24px !important; }
 
@@ -73,12 +95,14 @@ input.autocomplete { background: #fff url(icons/magnifier.png) no-repeat 4px 50%
 .nodata, .warning { background-color: #fff3cd; border-color: #ffecb5; }
 
 /* Submit button */
-input[type="submit"] { background-color: #4169E1; color: #FFF; border: none; padding: 0 12px; border: 1px solid #A7C7E7; }
+input[type="submit"] { background-color: cornflowerblue; color: #FFF; border: none; padding: 0 12px; border: 1px solid #A7C7E7; }
 input[type="submit"]:hover { background-color: #A7C7E7; }
 /* Button style */
 .contextual > :not(:first-child) { margin-left: 3px; }
 .contextual  .icon.icon-zoom-out, .icon.icon-zoom-in {
-  padding-left: 26px;
+  /* mark by tomy 2025-0918 because redmine6
+  padding-left: 26px;*/
+  padding-left: 12x;
   padding-right: 10px;
   display: inline-block;
   height: 22px;
@@ -88,49 +112,6 @@ input[type="submit"]:hover { background-color: #A7C7E7; }
   border-radius: 3px;
   background-position: 15% 50%;
 }
-/* Badge */
-.badge { padding: 2px 5px; font-size: 11px; }
-/* Icons */
-.icon-add               { background-image: url(icons/add.png); }
-.icon-checked           { background-image: url(icons/check.png); }
-.icon-reload            { background-image: url(icons/reload.png); }
-.icon-save              { background-image: url(icons/save.png); }
-.icon-time-add          { background-image: url(icons/time-add.png); }
-.icon-settings          { background-image: url(icons/settings.png); }
-.icon-bookmark          { background-image: url(icons/bookmark.png); }
-.icon-bookmark-off      { background-image: url(icons/bookmark-off.png); }
-.icon-edit              { background-image: url(icons/edit.png); }
-.icon-group             { background-image: url(icons/group.png); }
-.icon-help              { background-image: url(icons/help.png); }
-.icon-user              { background-image: url(icons/user.png); }
-.icon-time              { background-image: url(icons/time.png); }
-.icon-list              { background-image: url(icons/list.png); }
-.icon-del               { background-image: url(icons/del.png); }
-.icon-import            { background-image: url(icons/import.png); }
-.icon-copy              { background-image: url(icons/copy.png); }
-.icon-copy-link         { background-image: url(icons/copy-link.png); }
-.icon-view              { background-image: url(icons/view.png) !important; }
-.icon-lock              { background-image: url(icons/lock.png); }
-.icon-locked            { background-image: url(icons/lock.png); }
-.icon-zoom-in           { background-image: url(icons/zoom-in.png); }
-.icon-zoom-out          { background-image: url(icons/zoom-out.png); }
-.icon-sort-handle       { background-image: url(icons/sort-handle.png); }
-.icon-download          { background-image: url(icons/download.png); }
-.icon-attachment        { background-image: url(icons/attachment.png); }
-.icon-history           { background-image: url(icons/history.png); }
-.icon-comment           { background-image: url(icons/comment.png); }
-.icon-email-add         { background-image: url(icons/email-add.png); }
-.icon-passwd            { background-image: url(icons/passwd.png); }
-.icon-news              { background-image: url(icons/news.png); }
-.icon-projects          { background-image: url(icons/project.png); }
-.icon-package           { background-image: url(icons/package.png); }
-.icon-issue             { background-image: url(icons/issue.png); }
-.icon-issue-edit        { background-image: url(icons/issue-edit.png); }
-.icon-workflows         { background-image: url(icons/workflows.png); }
-.icon-plugins           { background-image: url(icons/plugins.png); }
-.icon-roles             { background-image: url(icons/roles.png); }
-.icon-custom-fields     { background-image: url(icons/custom-fields.png); }
-.icon-bookmarked-project{ background-image: url(icons/bookmarked-project.png); }
 
 /* Website LOGO */
 div#top-menu {
@@ -157,7 +138,6 @@ div#top-menu {
 @media screen and (max-width: 600px) {
     #projects-index ul.projects li.root { width: calc(100% - 12px); }
 }
-
 
 /* Page transition */
 #main {
@@ -208,18 +188,6 @@ tr.time-entry td.issue a.issue {
     border: 1px solid lightgray;
     margin-right: 4px;
 }
-
-/* Fix reply subject bug */
-input#message_subject, input#document_title, input#issue_subject, input#news_title, textarea#news_summary {
-    width: 100%; max-width: 100%;
-}
-
-/* compatible for normal.css */
-div.issue .attribute .value { overflow: visible; }
-[type="checkbox"], [type="radio"] { margin-left: 4px; margin-right: 4px; }
-
-/* Forum setting table borderless*/
-table.list, .table-list { border:0 }
 
 /* Popup window style */
 div.modal { border-radius:0 ; padding: 0 0 4px 0; }
@@ -280,12 +248,14 @@ ul.cal             { border: 0; } /* compatible with Redmine 5.1 */
 .document-item .updated_on em { padding-left: 20px; font-weight: bold; }
 .document-item h4.title { padding-bottom: 10px; font-size: 15px; font-weight: 300; }
 .document-item h4.title a {
-    background-image: url(icons/attachment.png);;
+    background-image: url(icons/attachment.png); /* use to remdine6*/
     background-position: 0% 50%;
     background-repeat: no-repeat;
     padding-left: 20px;
 }
 /* News module */
+.wiki.wiki-page { font-size: 1.1em; font-weight: 400; } /* 2024-0402 font size tuning*/
+div.wiki { color: #121212; line-height: 1.5; } /* 2024-0402 wiki行間距、字體顏色 */
 article.news-article {
     padding: 18px;
     background-color: #f6f6f6;
@@ -293,14 +263,6 @@ article.news-article {
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,.07);
     margin-bottom: 15px;
-}
-h3.comments {
-    padding-top: 2px;
-    padding-bottom: 3px;
-    background-image: url(icons/comment.png);
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    padding-left: 20px;
 }
 /* Gantt moudle */
 .task_late { background: #f66; }
@@ -323,7 +285,7 @@ div.wiki h2, div.wiki .h2 {
 }
 div.wiki h3, div.wiki .h3 { padding-bottom: .2em; font-size: 1.25em; font-weight: 500; }
 div.wiki .toc { line-height: unset; padding: 10px 18px 14px 18px; border-radius: 15px; font-size: 1em; }
-div.wiki ul.toc a { font-size: 1.25em; }
+div.wiki ul.toc a { font-size: 1em; }
 div.wiki ul.toc a:hover { text-decoration: none; }
 div.wiki ul.toc {
     padding: 12px 20px;
@@ -333,6 +295,7 @@ div.wiki ul.toc {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 /* Forum module */
+table.list, .table-list { border:0 } /* Forum setting table borderless*/
 p.breadcrumb { font-size: 1.05em; }
 table.messages th, table.messages td { text-align: left; padding: 2px 2px 2px 20px; } 
 table.boards th { text-align: left; padding-left: 8px;} 
@@ -359,35 +322,29 @@ body.avatars-off div.journal h4 img.gravatar { margin-left: 0px; }
 img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) { 
     border-radius: 160px; -moz-border-radius: 160px; -webkit-border-radius: 160px;
 }
-/* Collapsible sidebar toggle  */
-#main #sidebar { padding: 20px 20px; }
-#sidebar {
-    will-change: margin;
-    transition: margin .5s;
-    flex: 0 0 250px;
-    order: -1;
-}
-#sidebar.sidebar-hidden { display: none; }
-#sidebar.sidebar-hiding { margin-right: -291px; }
-.sidebar-toggler.sidebar-hidden { background-image: url(icons/ArrowBack.png); }
-.sidebar-toggler {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    bottom: -3px;
-    width: 14px;
-    height: 16px;
-    transform: translateY(100%);
-    background-position: center;
-    line-height: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    right: 0;
-    background-image: url(icons/ArrowForward.png);
+
+
+/* Fix reply subject bug */
+input#message_subject, input#document_title, input#issue_subject, input#news_title, textarea#news_summary {
+    width: 100%; max-width: 100%;
 }
 
-/* 2024-0402 wiki行間距、字體顏色 */
-.wiki.wiki-page { font-size: 1.1em; font-weight: 400; }
-div.wiki { color: #121212; line-height: 1.5; }
+/* compatible for normal.css */
+div.issue .attribute .value { overflow: visible; }
+[type="checkbox"], [type="radio"] { margin-left: 4px; margin-right: 4px; }
+
+
+/* Sidebar tuning for redmine6 */
+.sidebar-toggler.sidebar-hidden { background-image: url(icons/ArrowBack.png); }
+#sidebar-switch-button:hover { background-color: transparent; }
+.collapsedsidebar #sidebar { border: 0px; }
+/* fix font size for activity and sidebar for redmine6 */
+div#activity dd { font-size: 0.75rem; }
+#sidebar { font-size: 0.75rem; }
+#history h4 { font-size: 0.75rem; }
+/* gantt font size tuning for redmine6 */
+body table.gantt-table { font-size: 16px; }
+/* main menu position tuning for redmine6 */
+#main-menu { left: -16px; position: relative; background: white; padding: 4px 24px; }
+/* sidebar line height tuning for redmine6 */
+#sidebar ul li, ul.flat li { line-height: 1.7em; }

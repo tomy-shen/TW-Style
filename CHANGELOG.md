@@ -1,3 +1,10 @@
+v3.0.0 (2025-09-22)
+* 支持 Redmine 6.x（不支持向下版本的兼容）
+* 適配 Redmine 6.x 的側邊選單折疊（collapsible sidebar）
+* 適配 Redmine 6.x 的 svg icon
+* 調整全局字型大小
+* 調整主選單視覺
+
 v2.2.0 (2024-10-16)
 * 引入 normalize.css
 * Wiki 字體、尺寸間距調整
