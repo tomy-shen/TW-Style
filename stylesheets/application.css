@@ -57,7 +57,6 @@ button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu 
 #projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
 #projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
 #projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 0px; margin: 8px; width: calc(25% - 10px); }
-#projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
 #history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
 #content .tabs ul li a { border: 1px solid transparent; }
 #footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2025"; white-space: pre-wrap; }
@@ -83,8 +82,8 @@ table.list table.progress td, table.progress td { padding-top: 2px; padding-bott
 div.issue { padding:20px; margin-top: 2px; background: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
 div#history { margin-top: 18px; }
 div#replies { padding-left: 28px; }
-/* mark because redmine 6
- a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; } */
+/* mark because redmine 6 */
+/* a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; } */
 legend { margin-left: 8px; }
 
 #project-jump .drdn-trigger { padding-left: 10px; background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%; border-radius: 25px; } /* use to redmine6 */
