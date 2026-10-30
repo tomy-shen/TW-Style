@@ -1,3 +1,11 @@
+v4.0.0 (2026-10-30)
+* 支持 Redmine 7
+* 更新 top-menu logo
+* 優化 Calendar 頁面視覺
+* 優化工單 pagination 視覺
+* 優化 sidebar-switch-button 視覺
+* 修復 dashboard plugin 全螢幕顯示的 bug
+
 v3.0.0 (2025-09-22)
 * 支持 Redmine 6.x（不支持向下版本的兼容）
 * 適配 Redmine 6.x 的側邊選單折疊（collapsible sidebar）

@@ -4,138 +4,467 @@
 @import url(/application.css);
 
 /*
- * TW-Style theme version 3.0.0, Copyright (C) 2025 Tomy Shen
+ * TW-Style theme version 4.0.0, Copyright (C) 2026 Tomy Shen
  *
  * Author: Tomy Shen (tomy843012@hotmail.com)
  * Website: https://redmine-tw.net
- * @2025-09-22
+ * @2026-10-30
  * @license https://opensource.org/license/mit/
  *
  */
 
-#top-menu li { padding-right: 5px; }
-#top-menu a  { font-weight: unset; }
+#top-menu li {
+    padding-right: 5px;
+}
+
+#top-menu a {
+    font-weight: unset;
+}
+
 /* modify by tomy 2025-0918 for redmine6 */
-#header { 
+#header {
     background: linear-gradient(to right, #356D92, #e4e5e6);
     min-height: 4.4em;
     padding: 8px 16px 0px 16px;
-    box-shadow: 0px 5px 10px -5px lightgray; 
+    box-shadow: 0px 5px 10px -5px lightgray;
 }
+
 #header h1 {
     color: white;
     margin-top: 3px;
     margin-bottom: 12px;
     font-family: -apple-system, "Microsoft JhengHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
-#header a { color: black; }
-#quick-search { margin-top: 8px; }
-button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu extend button */
-#main-menu li a { color: black; border-bottom: 3px solid transparent; }
+
+#header a {
+    color: black;
+}
+
+#quick-search {
+    margin-top: 8px;
+}
+
+button.tab-left,
+button.tab-right {
+    border: 0;
+    border-radius: 0;
+}
+
+/* Main-menu extend button */
+#main-menu li a {
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
 #main-menu li a:hover {
-    line-height: 1.7em; /* add by tomy 2025-0922 for redmine6 */
+    line-height: 1.7em;
+    /* add by tomy 2025-0922 for redmine6 */
     color: black;
     background: #fff;
     border-bottom: 3px solid #628DB6;
 }
-#main-menu li a.new-object { background-color: transparent; }
-#main-menu li a.new-object:hover { background: #fff; color: black; border-bottom: 3px solid transparent; }
-/* modify by tomy 2025-0922 for redmine6 */
-#main-menu li a.selected, #main-menu li a.selected:hover {
-    background: #628DB6;
-    color: white;
-    border-bottom: 0 solid transparent;
-    border-radius: 0px;
-    font-weight: unset;
-    line-height: 1.7em;
-    border-bottom: 3px solid aliceblue;
-}
-#main-menu .menu-children li a { border-bottom: 3px solid transparent; }
-#main-menu .menu-children li a:hover { border-bottom: 3px solid transparent; }
-#main       { border-top: 1px solid lightgray; }
-#sidebar    { background: white; }
-#projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
-#projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
-#projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 0px; margin: 8px; width: calc(25% - 10px); }
-#history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
-#content .tabs ul li a { border: 1px solid transparent; }
-#footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2025"; white-space: pre-wrap; }
-#login-form { border: 1px solid transparent; background-color: transparent; }
-input#login-submit { color: white; background: #3E5B76; border: 0px; }
-#login-form input#username, #login-form input#password { border-top: 0px; border-left: 0px; border-right: 0px; border-radius: 0px; }
 
-body { font-size: 14px; }
-table { border-spacing: 0; border-collapse: collapse; }
-table.list, .table-list { border-collapse: collapse; line-height: 22px; font-size: 0.75rem; }
-table.list th a, table.list .table-list-header a { color: #212136; }
-table.list th, .table-list-header { background-color: transparent; border-bottom: 1px solid lightgray; padding-bottom: 8px; }
-table.list th.activity, table.list th.assigned_to, table.list th.attachments, table.list th.author, table.list th.category, table.list th.comments, table.list th.description, table.list th.fixed_version, table.list th.last_notes, table.list th.last_updated_by, table.list th.name, table.list th.parent-subject, table.list th.priority, table.list th.relations, table.list th.roles, table.list th.status, table.list th.string, table.list th.subject, table.list th.text, table.list th.tracker, table.list th.user, table.list td.activity, table.list td.assigned_to, table.list td.attachments, table.list td.author, table.list td.category, table.list td.comments, table.list td.description, table.list td.fixed_version, table.list td.last_notes, table.list td.last_updated_by, table.list td.name, table.list td.parent-subject, table.list td.priority, table.list td.relations, table.list td.roles, table.list td.status, table.list td.string, table.list td.subject, table.list td.text, table.list td.tracker, table.list td.user {
+#main-menu li a.new-object {
+    background-color: transparent;
+}
+
+#main-menu li a.new-object:hover {
+    background: #fff;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+@media (min-width: 900px) {
+    #main-menu li:has(> a.new-object) {
+        position: relative;
+    }
+
+    #main-menu li a.new-object,
+    #main-menu li a.new-object:hover {
+        box-sizing: border-box;
+        inline-size: 30px;
+        block-size: 30px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        color: #121212;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    #main-menu a.new-object+.menu-children {
+        inset-block-start: 100%;
+        margin-block-start: 4px;
+        border-block-start: 1px solid var(--oc-blue-7);
+    }
+
+    /* Keep the hover path continuous across the space below the button. */
+    #main-menu a.new-object+.menu-children::before {
+        content: "";
+        position: absolute;
+        inset-block-end: 100%;
+        inset-inline-start: 0;
+        inline-size: 100%;
+        block-size: 4px;
+    }
+}
+
+/* Selected project menu item */
+#main-menu>ul>li>a.selected,
+#main-menu>ul>li>a.selected:hover {
+    background: transparent;
+    color: #121212;
+    border-bottom: 3px solid transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    font-weight: bold;
+    line-height: 1.7em;
+}
+
+#main-menu .menu-children li a,
+#main-menu .menu-children li a:hover {
+    border-bottom: 3px solid transparent;
+    line-height: 16px;
+}
+
+#main {
+    border-top: 1px solid lightgray;
+}
+
+#sidebar {
+    background: white;
+}
+
+/* Additionals dashboard links keep their custom selection design. */
+#sidebar a.selected:not(.dashboard) {
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+#projects-index {
+    column-width: unset;
+    -webkit-column-width: unset;
+    margin: -5px;
+}
+
+#projects-index ul.projects.root {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects-index ul.projects li.root {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .2);
+    border-radius: 0px;
+    margin: 8px;
+    width: calc(25% - 10px);
+}
+
+#history .tab-content {
+    padding: 0 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#content .tabs ul li a {
+    border: 1px solid transparent;
+}
+
+#footer::after {
+    content: "\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2026";
+    white-space: pre-wrap;
+}
+
+#login-form {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+input#login-submit {
+    color: white;
+    background: #3E5B76;
+    border: 0px;
+}
+
+#login-form input#username,
+#login-form input#password {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+}
+
+body {
+    font-size: 14px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.list,
+.table-list {
+    border-collapse: collapse;
+    line-height: 22px;
+    font-size: 0.75rem;
+}
+
+table.list th a,
+table.list .table-list-header a {
+    color: #212136;
+}
+
+table.list th,
+.table-list-header {
+    background-color: transparent;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 8px;
+}
+
+table.list th.activity,
+table.list th.assigned_to,
+table.list th.attachments,
+table.list th.author,
+table.list th.category,
+table.list th.comments,
+table.list th.description,
+table.list th.fixed_version,
+table.list th.last_notes,
+table.list th.last_updated_by,
+table.list th.name,
+table.list th.parent-subject,
+table.list th.priority,
+table.list th.relations,
+table.list th.roles,
+table.list th.status,
+table.list th.string,
+table.list th.subject,
+table.list th.text,
+table.list th.tracker,
+table.list th.user,
+table.list td.activity,
+table.list td.assigned_to,
+table.list td.attachments,
+table.list td.author,
+table.list td.category,
+table.list td.comments,
+table.list td.description,
+table.list td.fixed_version,
+table.list td.last_notes,
+table.list td.last_updated_by,
+table.list td.name,
+table.list td.parent-subject,
+table.list td.priority,
+table.list td.relations,
+table.list td.roles,
+table.list td.status,
+table.list td.string,
+table.list td.subject,
+table.list td.text,
+table.list td.tracker,
+table.list td.user {
     text-align: left;
 }
-table.list:not(.odd-even) tbody tr:nth-child(odd):hover, .odd:hover, #issue-changesets div.changeset:nth-child(odd):hover, table.list:not(.odd-even) tbody tr:nth-child(even):hover, .even:hover, #issue-changesets div.changeset:nth-child(even):hover {
+
+table.list:not(.odd-even) tbody tr:nth-child(odd):hover,
+.odd:hover,
+#issue-changesets div.changeset:nth-child(odd):hover,
+table.list:not(.odd-even) tbody tr:nth-child(even):hover,
+.even:hover,
+#issue-changesets div.changeset:nth-child(even):hover {
     background-color: #FEFBE7;
 }
-table.list td { padding-top: 3px; padding-bottom: 3px; } /* Issue list */
-table.issues td { padding-top: 4px; padding-bottom: 4px; }
-table.list table.progress td, table.progress td { padding-top: 2px; padding-bottom: 2px; }
 
-div.issue { padding:20px; margin-top: 2px; background: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
-div#history { margin-top: 18px; }
-div#replies { padding-left: 28px; }
+table.list td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* Issue list */
+table.issues td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+table.list table.progress td,
+table.progress td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+div.issue {
+    padding: 20px;
+    margin-top: 2px;
+    background: cornsilk;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .2);
+}
+
+div.issue .next-prev-links .pagination ul.pages li {
+    background-color: #E9F0F6;
+    border-color: #C3D0DC;
+}
+
+div.issue .next-prev-links .pagination ul.pages li a,
+div.issue .next-prev-links .pagination ul.pages li a:hover,
+div.issue .next-prev-links .pagination ul.pages li a:focus-visible {
+    color: #334E68;
+}
+
+div.issue .next-prev-links .pagination ul.pages li span {
+    color: #7A8794;
+}
+
+div.issue .next-prev-links .pagination ul.pages li.page:hover,
+div.issue .next-prev-links .pagination ul.pages li.page:focus-within {
+    background-color: #D7E4EF;
+}
+
+div#history {
+    margin-top: 18px;
+}
+
+div#replies {
+    padding-left: 28px;
+}
+
 /* mark because redmine 6 */
 /* a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; } */
-legend { margin-left: 8px; }
+legend {
+    margin-left: 8px;
+}
 
-#project-jump .drdn-trigger { padding-left: 10px; background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%; border-radius: 25px; } /* use to redmine6 */
-#project-jump .drdn-content { padding: 2px; margin-top: 4px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
-input.autocomplete { background: #fff url(icons/magnifier.png) no-repeat 4px 50%; padding-left:24px !important; }
+#project-jump .drdn-trigger {
+    padding-left: 10px;
+    background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%;
+    border-radius: 25px;
+}
 
-.box              { border-radius: 8px; padding: 12px; }
-.nodata, .warning { background-color: #fff3cd; border-color: #ffecb5; }
+/* use to redmine6 */
+#project-jump .drdn-content {
+    padding: 2px;
+    margin-top: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input.autocomplete {
+    background: #fff url(icons/magnifier.png) no-repeat 4px 50%;
+    padding-left: 24px !important;
+}
+
+.box {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.nodata,
+.warning {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
 
 /* Submit button */
-input[type="submit"] { background-color: cornflowerblue; color: #FFF; border: none; padding: 0 12px; border: 1px solid #A7C7E7; }
-input[type="submit"]:hover { background-color: #A7C7E7; }
+input[type="submit"] {
+    background-color: cornflowerblue;
+    color: #FFF;
+    border: none;
+    padding: 0 12px;
+    border: 1px solid #A7C7E7;
+}
+
+input[type="submit"]:hover {
+    background-color: #A7C7E7;
+}
+
 /* Button style */
-.contextual > :not(:first-child) { margin-left: 3px; }
-.contextual  .icon.icon-zoom-out, .icon.icon-zoom-in {
-  /* mark by tomy 2025-0918 because redmine6
+.contextual> :not(:first-child) {
+    margin-left: 3px;
+}
+
+.contextual .icon.icon-zoom-out,
+.icon.icon-zoom-in {
+    /* mark by tomy 2025-0918 because redmine6
   padding-left: 26px;*/
-  padding-left: 12x;
-  padding-right: 10px;
-  display: inline-block;
-  height: 22px;
-  line-height: 22px;
-  vertical-align: middle;
-  background-color: whitesmoke;
-  border-radius: 3px;
-  background-position: 15% 50%;
+    padding-left: 12x;
+    padding-right: 10px;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    background-position: 15% 50%;
 }
 
 /* Website LOGO */
-div#top-menu {
-    background-image: url("icons/redmine-tw.png");
+nav#top-menu {
+    background-image: url("icons/redmine-logo-balanced.png");
+    /* Compensate PNG transparency to match the original visible wordmark. */
+    background-size: auto 30.7px;
     background-repeat: no-repeat;
-    background-position: 10px 48%;
-    padding-left: 100px;
+    background-position: 3px 4px;
+    padding-inline-start: 100px;
 }
+
 /* Responsive RWD */
 @media screen and (max-width: 899px) {
-    #header { background-color: #5B7493 !important; }
-    .flyout-menu { background-color: #628DB6 !important; }
-    .flyout-menu h3 { background-color: #003153 !important; }
+
+    #header,
+    #quick-search {
+        background-image: none;
+    }
+
+    #header {
+        background-color: #5B7493 !important;
+    }
+
+    .flyout-menu {
+        background-color: #628DB6 !important;
+    }
+
+    .flyout-menu h3 {
+        background-color: #003153 !important;
+    }
 }
+
+@media screen and (min-width: 900px) {
+
+    /* The relative menu needs no space reserved for the core absolute menu. */
+    body.has-main-menu #header {
+        padding-block-end: 0;
+    }
+
+    #main-menu {
+        inline-size: calc(100% + 32px);
+        box-sizing: border-box;
+    }
+}
+
 @media screen and (min-width: 1181px) {
-    #projects-index ul.projects li.root { width: calc(25% - 18px); }
+    #projects-index ul.projects li.root {
+        width: calc(25% - 18px);
+    }
 }
+
 @media screen and (max-width: 1180px) {
-    #projects-index ul.projects li.root { width: calc(33.333% - 18px); }
+    #projects-index ul.projects li.root {
+        width: calc(33.333% - 18px);
+    }
 }
+
 @media screen and (max-width: 888px) {
-    #projects-index ul.projects li.root { width: calc(50% - 18px); }
+    #projects-index ul.projects li.root {
+        width: calc(50% - 18px);
+    }
 }
+
 @media screen and (max-width: 600px) {
-    #projects-index ul.projects li.root { width: calc(100% - 12px); }
+    #projects-index ul.projects li.root {
+        width: calc(100% - 12px);
+    }
 }
 
 /* Page transition */
@@ -144,44 +473,129 @@ div#top-menu {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 @keyframes fadeInAnimation {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Let Redmine Dashboard fullscreen escape the page animation's stacking context. */
+body.controller-rdb_taskboard:has(#rdb.rdb-fullscreen) #main {
+    animation: none;
 }
 
 /* Global */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: -apple-system, "Microsoft YaHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
+
 /* Top MENU #5B7493 */
-#top-menu { background-color: #5B7493; font-size: 1em; padding: 6px 14px; height: unset; line-height: 1.8em }
-#top-menu a { text-decoration:none; }
-#top-menu a:hover { color: #ebe9f4; text-decoration: none; }
+#top-menu {
+    background-color: #5B7493;
+    font-size: 1em;
+    padding: 6px 14px;
+    height: unset;
+    line-height: 1.8em
+}
+
+#top-menu a {
+    text-decoration: none;
+}
+
+#top-menu .top-menu__links>ul>li>a:hover {
+    color: #ebe9f4;
+    text-decoration: none;
+}
+
+#account .dropdown-content li a:hover,
+#account .dropdown-content li a:focus-visible {
+    color: #121212;
+    background-color: var(--oc-gray-1);
+}
+
 /* Search Bar */
-#quick-search form label a { visibility: hidden; position: sticky; }
+#quick-search form label a {
+    visibility: hidden;
+    position: sticky;
+}
+
 #quick-search form label a::after {
     visibility: visible;
-    font-family: FontAwesome; 
-    font-size: 16px; 
-    display: inline-block; 
+    font-family: FontAwesome;
+    font-size: 16px;
+    display: inline-block;
     content: '\f002';
     top: 0;
     left: 0;
 }
-#quick-search form { margin-right: 4px; }
-#quick-search #q { margin-left: -34px; border-radius: 25px; }
-#quick-search #project-jump { box-shadow: 0 0px 3px rgba(0,0,0,.1);border-radius: 25px; }
-input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position */
-#quick-search #q:focus { border: 1px solid darkgray; } 
+
+#quick-search form {
+    margin-right: 4px;
+}
+
+#quick-search #q {
+    margin-left: -34px;
+    border-radius: 25px;
+}
+
+#quick-search #project-jump {
+    box-shadow: 0 0px 3px rgba(0, 0, 0, .1);
+    border-radius: 25px;
+}
+
+input#q.small {
+    padding-left: 28px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, .1);
+}
+
+/* dialog cursor position */
+#quick-search #q:focus {
+    border: 1px solid darkgray;
+}
+
 /* Priority */
-.autoscroll table.list .priority-highest { background-color: #FFD3D3 } 
-.autoscroll table.list .priority-highest:hover { background-color: #FEFBE7 }
-.autoscroll table.list .priority-high2 { background-color: #FFE1E1 }
-.autoscroll table.list .priority-high2:hover { background-color: #FEFBE7 }
-.autoscroll table.list .priority-high3 { background-color: #FFEEEE }
-.autoscroll table.list .priority-high3:hover { background-color: #FEFBE7 }
-.autoscroll table.list .priority-lowest { background-color: #EAF7FF }
-.autoscroll table.list .priority-lowest:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-highest {
+    background-color: #FFD3D3
+}
+
+.autoscroll table.list .priority-highest:hover {
+    background-color: #FEFBE7
+}
+
+.autoscroll table.list .priority-high2 {
+    background-color: #FFE1E1
+}
+
+.autoscroll table.list .priority-high2:hover {
+    background-color: #FEFBE7
+}
+
+.autoscroll table.list .priority-high3 {
+    background-color: #FFEEEE
+}
+
+.autoscroll table.list .priority-high3:hover {
+    background-color: #FEFBE7
+}
+
+.autoscroll table.list .priority-lowest {
+    background-color: #EAF7FF
+}
+
+.autoscroll table.list .priority-lowest:hover {
+    background-color: #FEFBE7
+}
+
 tr.time-entry td.issue a.issue {
     padding: 2px 8px;
     border: 1px solid lightgray;
@@ -189,31 +603,95 @@ tr.time-entry td.issue a.issue {
 }
 
 /* Popup window style */
-div.modal { border-radius:0 ; padding: 0 0 4px 0; }
-.ui-widget.ui-widget-content { border: unset; }
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: unset; }
-.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {border-top-left-radius: unset; }
-.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { border-bottom-left-radius: unset; }
-.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border-bottom-right-radius: unset; }
-.ui-widget-header { background: #628DB6; border: unset; color: #fff; }
-button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close { border-radius: 50%; }
-.ui-dialog .ui-dialog-titlebar-close { right: 0.4em; }
+div.modal {
+    border-radius: 0;
+    padding: 0 0 4px 0;
+}
+
+.ui-widget.ui-widget-content {
+    border: unset;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    border-top-right-radius: unset;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    border-top-left-radius: unset;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    border-bottom-left-radius: unset;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    border-bottom-right-radius: unset;
+}
+
+.ui-widget-header {
+    background: #628DB6;
+    border: unset;
+    color: #fff;
+}
+
+button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
+    border-radius: 50%;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    right: 0.4em;
+}
+
 /* Settings section */
-#content .tabs ul li a { font-weight: unset; }
-#content .tabs ul li a.selected { font-weight: bold; color: #169; }
-.tabular label { font-weight: unset; }
-.box legend { font-weight: bold; }
+#content .tabs ul li a {
+    font-weight: unset;
+}
+
+#content .tabs ul li a.selected {
+    font-weight: bold;
+    color: #169;
+}
+
+.tabular label {
+    font-weight: unset;
+}
+
+.box legend {
+    font-weight: bold;
+}
+
 /* Overview module */
 .mypage-box {
     padding: 12px;
     background-color: #f6f6f6;
     border: 1px solid #e4e4e4;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
 }
+
 /* Activity module */
-div#activity h3 { background-color: transparent; margin-bottom: 0px; }
-div#activity dd .description, #search-results dd .description { font-style: normal; }
+div#activity h3 {
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+
+div#activity dd .description,
+#search-results dd .description {
+    font-style: normal;
+}
+
 div#activity dl {
     margin-left: 0px;
     padding: 0px 20px;
@@ -223,69 +701,231 @@ div#activity dl {
     border-right: 0px;
     margin-top: 2px;
 }
-/* Roadmap percentage bar */ 
-#roadmap { margin-left: 10px; }
-table.progress td:first-child { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
-table.progress td:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
-table.progress td.closed { background: #00c600 none repeat scroll 0%; }
-.version-overview table.progress td, table.progress td { height: .5em; }
-/* Calendar module */
-table.cal          { border: 0 !important; border-width: 0px !important; } /* Table border */
-table.cal thead th { background-color: transparent !important; padding-bottom: 8px !important; } /* Table top row */
-table.cal td.week-number { border: 0 none !important; background-color: transparent !important; } /* Table left column */
-table.cal td       { border: 1px solid #e3e5ec !important; } /* every td border */
-table.cal td.today { background: cornsilk !important; } /* Today's background color */
 
-ul.cal             { border: 0; } /* compatible with Redmine 5.1 */
-.cal .calbody      { margin-right: -1px; margin-top: -1px; border-bottom: 1px solid #d7d7d7; border-right: 1px solid #d7d7d7; }
-.cal .week-number  { background-color: transparent; }
-.cal .calhead      { background-color: transparent; margin-bottom: 4px; }
-.cal div.issue     { padding:unset; background: white;padding: 4px; }
+/* Roadmap percentage bar */
+#roadmap {
+    margin-left: 10px;
+}
+
+table.progress td:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+table.progress td:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+table.progress td.closed {
+    background: #00c600 none repeat scroll 0%;
+}
+
+.version-overview table.progress td,
+table.progress td {
+    height: .5em;
+}
+
+/* Calendar module */
+table.cal {
+    border: 0 !important;
+    border-width: 0px !important;
+}
+
+/* Table border */
+table.cal thead th {
+    background-color: transparent !important;
+    padding-bottom: 8px !important;
+}
+
+/* Table top row */
+table.cal td.week-number {
+    border: 0 none !important;
+    background-color: transparent !important;
+}
+
+/* Table left column */
+table.cal td {
+    border: 1px solid #e3e5ec !important;
+}
+
+/* every td border */
+table.cal td.today {
+    background: cornsilk !important;
+}
+
+/* Today's background color */
+
+ul.cal {
+    border: 0;
+}
+
+/* compatible with Redmine 5.1 */
+.cal .calbody {
+    margin-right: -1px;
+    margin-top: -1px;
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+}
+
+.cal .week-number {
+    background-color: transparent;
+}
+
+.cal .calhead {
+    background-color: transparent;
+    margin-bottom: 4px;
+}
+
+.cal div.issue {
+    padding: unset;
+    background: white;
+    padding: 4px;
+}
+
+/* Keep Calendar headings and non-working days visually connected to the grid. */
+body.controller-calendars ul.cal > .calhead {
+    background-color: #f7f8fa;
+    color: #5b7493;
+    font-weight: 600;
+    margin-block-end: 0;
+    padding-block: 8px;
+    border-block-end: 1px solid #d7d7d7;
+}
+
+body.controller-calendars ul.cal > .week-number {
+    background-color: #f7f8fa;
+    color: #5b7493;
+}
+
+body.controller-calendars ul.cal > .calbody.nwday:not(.other-month):not(.today) {
+    background-color: #f7f8fa;
+}
+
 /* Documents module */
-#document-list .document-group { padding: 18px 18px 0 18px; margin-bottom: 2px; }
-.document-item { padding-bottom: 10px; padding-top: 8px; padding-left: 16px; margin-left: 32px; border-left: 2px dashed lightgray; }
-.document-item .updated_on em { padding-left: 20px; font-weight: bold; }
-.document-item h4.title { padding-bottom: 10px; font-size: 15px; font-weight: 300; }
+#document-list .document-group {
+    padding: 18px 18px 0 18px;
+    margin-bottom: 2px;
+}
+
+#document-list .document-group .group-name {
+    background-color: transparent;
+}
+
+.document-item {
+    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-left: 16px;
+    margin-left: 32px;
+    border-left: 2px dashed lightgray;
+}
+
+.document-item .updated_on em {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.document-item h4.title {
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .document-item h4.title a {
-    background-image: url(icons/attachment.png); /* use to remdine6*/
+    background-image: url(icons/attachment.png);
+    /* use to remdine6*/
     background-position: 0% 50%;
     background-repeat: no-repeat;
     padding-left: 20px;
 }
+
 /* News module */
-.wiki.wiki-page { font-size: 1.1em; font-weight: 400; } /* 2024-0402 font size tuning*/
-div.wiki { color: #121212; line-height: 1.5; } /* 2024-0402 wiki行間距、字體顏色 */
+.wiki.wiki-page {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+/* 2024-0402 font size tuning*/
+div.wiki {
+    color: #121212;
+    line-height: 1.5;
+}
+
+/* 2024-0402 wiki行間距、字體顏色 */
 article.news-article {
     padding: 18px;
     background-color: #f6f6f6;
     border: 1px solid #e4e4e4;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
     margin-bottom: 15px;
 }
+
 /* Gantt moudle */
-.task_late { background: #f66; }
-.task_done { background: #00c600; }
-/* Wiki module */
-div.wiki h1, div.wiki .h1, div.wiki h2, div.wiki .h2, div.wiki h3, div.wiki .h3, div.wiki h4, div.wiki .h4, div.wiki h5, div.wiki .h5, div.wiki h6, div.wiki .h6 {
-    margin-top: 1.1em; margin-bottom: 0.25em; font-weight: 300;
+.task_late {
+    background: #f66;
 }
-div.wiki h1, div.wiki .h1 {
+
+.task_done {
+    background: #00c600;
+}
+
+/* Wiki module */
+div.wiki h1,
+div.wiki .h1,
+div.wiki h2,
+div.wiki .h2,
+div.wiki h3,
+div.wiki .h3,
+div.wiki h4,
+div.wiki .h4,
+div.wiki h5,
+div.wiki .h5,
+div.wiki h6,
+div.wiki .h6 {
+    margin-top: 1.1em;
+    margin-bottom: 0.25em;
+    font-weight: 300;
+}
+
+div.wiki h1,
+div.wiki .h1 {
     padding-bottom: 0.3em;
     border-bottom: 1px solid #dadce6;
     font-size: 2.45em;
     line-height: 1.2;
 }
-div.wiki h2, div.wiki .h2 {
+
+div.wiki h2,
+div.wiki .h2 {
     padding-bottom: 0.3em;
     border-bottom: 1px solid #dadce6;
     font-size: 1.75em;
     line-height: 1.225;
 }
-div.wiki h3, div.wiki .h3 { padding-bottom: .2em; font-size: 1.25em; font-weight: 500; }
-div.wiki .toc { line-height: unset; padding: 10px 18px 14px 18px; border-radius: 15px; font-size: 1em; }
-div.wiki ul.toc a { font-size: 1em; }
-div.wiki ul.toc a:hover { text-decoration: none; }
+
+div.wiki h3,
+div.wiki .h3 {
+    padding-bottom: .2em;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+div.wiki .toc {
+    line-height: unset;
+    padding: 10px 18px 14px 18px;
+    border-radius: 15px;
+    font-size: 1em;
+}
+
+div.wiki ul.toc a {
+    font-size: 1em;
+}
+
+div.wiki ul.toc a:hover {
+    text-decoration: none;
+}
+
 div.wiki ul.toc {
     padding: 12px 20px;
     margin-bottom: 20px;
@@ -293,57 +933,199 @@ div.wiki ul.toc {
     border: 1px solid #e3e5ec;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 /* Forum module */
-table.list, .table-list { border:0 } /* Forum setting table borderless*/
-p.breadcrumb { font-size: 1.05em; }
-table.messages th, table.messages td { text-align: left; padding: 2px 2px 2px 20px; } 
-table.boards th { text-align: left; padding-left: 8px;} 
-table.boards td { text-align: left; padding-left: 18px;} 
+table.list,
+.table-list {
+    border: 0
+}
+
+/* Forum setting table borderless*/
+p.breadcrumb {
+    font-size: 1.05em;
+}
+
+table.messages th,
+table.messages td {
+    text-align: left;
+    padding: 2px 2px 2px 20px;
+}
+
+table.boards th {
+    text-align: left;
+    padding-left: 8px;
+}
+
+table.boards td {
+    text-align: left;
+    padding-left: 18px;
+}
+
 blockquote {
     border-left: 4px solid #3498db;
     margin: 0 0 8px;
     padding: 2px 12px;
     color: gray;
 }
+
 /* Plugin redmine-agile */
-body .issue-card { background-color: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
-div.agile-board.autoscroll { background-color: whitesmoke; }
-.agile-board table.list.issues-board tbody tr { background-color: whitesmoke !important; }
-.planning-board .column-header { text-align: center; }
-.planning-board { background-color: whitesmoke; }
+body .issue-card {
+    background-color: cornsilk;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .2);
+}
+
+div.agile-board.autoscroll {
+    background-color: whitesmoke;
+}
+
+.agile-board table.list.issues-board tbody tr {
+    background-color: whitesmoke !important;
+}
+
+.planning-board .column-header {
+    text-align: center;
+}
+
+.planning-board {
+    background-color: whitesmoke;
+}
+
 /* Plugin additionals */
-.active-dashboards ul,.recently-updated ,.dashboards { max-height: 100%; }
-#sidebar a.dashboard.selected { line-height: 1.7em; padding: 3px 12px 4px 11px; background-color: #C8C8C8; border-radius: 18px; }
-a.dashboard { line-height: 1.7em; padding: 3px 12px 4px 11px; margin-left: -2px; }
+.active-dashboards ul,
+.recently-updated,
+.dashboards {
+    max-height: 100%;
+}
+
+#sidebar a.dashboard.selected {
+    line-height: 1.7em;
+    padding: 3px 12px 4px 11px;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+a.dashboard {
+    line-height: 1.7em;
+    padding: 3px 12px 4px 11px;
+    margin-left: -2px;
+}
+
 /* Plugin local_avatars */
-body.avatars-on div.journal h4 img.gravatar { margin-left: -32px; }
-body.avatars-off div.journal h4 img.gravatar { margin-left: 0px; }
-img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) { 
-    border-radius: 160px; -moz-border-radius: 160px; -webkit-border-radius: 160px;
+body.avatars-on div.journal h4 img.gravatar {
+    margin-left: -32px;
+}
+
+body.avatars-off div.journal h4 img.gravatar {
+    margin-left: 0px;
+}
+
+img.gravatar,
+div.avatar-with-child>img.avatar:nth-child(2) {
+    border-radius: 50%;
 }
 
 
 /* Fix reply subject bug */
-input#message_subject, input#document_title, input#issue_subject, input#news_title, textarea#news_summary {
-    width: 100%; max-width: 100%;
+input#message_subject,
+input#document_title,
+input#issue_subject,
+input#news_title,
+textarea#news_summary {
+    width: 100%;
+    max-width: 100%;
 }
 
 /* compatible for normal.css */
-div.issue .attribute .value { overflow: visible; }
-[type="checkbox"], [type="radio"] { margin-left: 4px; margin-right: 4px; }
+div.issue .attribute .value {
+    overflow: visible;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    margin-left: 4px;
+    margin-right: 4px;
+}
 
 
 /* Sidebar tuning for redmine6 */
-.sidebar-toggler.sidebar-hidden { background-image: url(icons/ArrowBack.png); }
-#sidebar-switch-button:hover { background-color: transparent; }
-.collapsedsidebar #sidebar { border: 0px; }
+.sidebar-toggler.sidebar-hidden {
+    background-image: url(icons/ArrowBack.png);
+}
+
+@media (min-width: 900px) {
+    #sidebar-switch-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        inline-size: 28px;
+        block-size: 28px;
+        padding: 0;
+        border-radius: 6px;
+        background-color: #F1F3F5;
+        transition: background-color 0.15s ease;
+    }
+
+    #sidebar-switch-button svg {
+        stroke: #3E5B76;
+        stroke-width: 2;
+    }
+
+    #sidebar-switch-button:hover,
+    #sidebar-switch-button:focus-visible {
+        background-color: #E9ECEF;
+    }
+
+    #sidebar-switch-button:focus-visible {
+        outline: 2px solid #3E5B76;
+        outline-offset: -2px;
+    }
+
+    #main.collapsedsidebar #sidebar {
+        padding-inline-start: 28px;
+    }
+
+    #main.collapsedsidebar #sidebar-switch-panel {
+        margin-inline-start: -28px;
+    }
+}
+
+.collapsedsidebar #sidebar {
+    border: 0px;
+}
+
 /* fix font size for activity and sidebar for redmine6 */
-div#activity dd { font-size: 0.75rem; }
-#sidebar { font-size: 0.75rem; }
-#history h4 { font-size: 0.75rem; }
+div#activity dd {
+    font-size: 0.75rem;
+}
+
+#sidebar {
+    font-size: 0.75rem;
+}
+
+#history h4 {
+    font-size: 0.75rem;
+}
+
 /* gantt font size tuning for redmine6 */
-body table.gantt-table { font-size: 16px; }
+body table.gantt-table {
+    font-size: 16px;
+}
+
 /* main menu position tuning for redmine6 */
-#main-menu { left: -16px; position: relative; background: white; padding: 4px 24px; }
+#main-menu {
+    left: -16px;
+    position: relative;
+    background: white;
+    padding: 4px 24px;
+}
+
 /* sidebar line height tuning for redmine6 */
-#sidebar ul li, ul.flat li { line-height: 1.7em; }
+#sidebar ul li,
+ul.flat li {
+    line-height: 1.7em;
+}
+
+#sidebar #admin-menu li {
+    padding-block: 2px;
+}

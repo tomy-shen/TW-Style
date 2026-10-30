@@ -1,16 +1,18 @@
 # TW-Style
 
-![Redmine](https://img.shields.io/badge/Redmine-6.0-brightgreen)
+![Redmine](https://img.shields.io/badge/Redmine-7.0-brightgreen)
 
 A free Redmine theme made in Taiwan.
 
 With simple design, create a style that is compatible with English and Chinese visuals. This is my first time working on Github. If you like this, please feel free to give a star to this project.
 
-**Version：** 3.0.0
+**Version：** 4.0.0
 
-**Compatible with :** Redmine 6.x
+**Compatible with :** Redmine 7.x only
 
 **Supported by :** [Redmine-TW](https://redmine-tw.net)
+
+> 3.0.0 version is compatible with Redmine 6.X
 
 > 2.2.0 and previous versions are compatible with Redmine 5.1 - 4.1
 
@@ -19,7 +21,7 @@ With simple design, create a style that is compatible with English and Chinese v
 To install TW-Style, just download .zip and unpack it to your Redmine's themes/ folder.
 Then go to Redmine > Administration > Settings > Display and select TW-Style from the list and save the changes.
 
-> Due to the update of redmine 6, the current themes need to be precompiled after the initial installation. Reference [here](https://www.redmine.org/issues/41754).
+> After installing or updating the theme, precompile assets and restart the Redmine web service.
 
 ## Issues are listed in different colors according to their priority
 
@@ -32,8 +34,6 @@ Issue priorities can be added from the enumerations in the administration, and t
 3. If your image file size is too large or too small, You may also need to adjust css parameters
 
 ## Screenshots
-
-![screenshot01](screenshots/TW-Style-redmine-overview.png)
 
 ![screenshot02](screenshots/TW-Style-redmine-issue.png)
 
